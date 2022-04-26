@@ -15,7 +15,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void epargne(View view) {
-        Intent intent = new Intent(this,EpargneMainActivity.class);
+        Intent intent = new Intent(this, EpargneActivity.class);
+        startActivity(intent);
+    }
+    public void creer(View view) {
+        Intent intent = new Intent(this, NewEpargneActivity.class);
         startActivity(intent);
     }
 }

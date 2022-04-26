@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class EpargneMainActivity extends AppCompatActivity {
+public class EpargneActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_epargne_main);
+        setContentView(R.layout.activity_epargne);
     }
 }
