@@ -31,7 +31,8 @@
                 android:text="ID du compte :"
                 android:textSize="20sp"/>
             <EditText
-                android:layout_width="wrap_content"
+                android:id="@+id/compte_id"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:hint="écrivez un id"
                 android:textSize="20sp"
@@ -49,7 +50,8 @@
                 android:text="Taux d'impôt :"
                 android:textSize="20sp"/>
             <EditText
-                android:layout_width="wrap_content"
+                android:id="@+id/impot"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="20"
                 android:textSize="20sp"
@@ -91,7 +93,8 @@
                         android:textSize="20sp"/>
 
                     <EditText
-                        android:layout_width="wrap_content"
+                        android:id="@+id/jan"
+                        android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:inputType="numberDecimal"
                         android:text="2.5"
@@ -110,10 +113,11 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Janvier :"
+                        android:text="Février  :"
                         android:textSize="20sp"/>
                     <EditText
-                        android:layout_width="wrap_content"
+                        android:id="@+id/fev"
+                        android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:text="2.5"
                         android:textSize="20sp"
@@ -132,10 +136,11 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Janvier :"
+                        android:text="Mars     :"
                         android:textSize="20sp"/>
                     <EditText
-                        android:layout_width="wrap_content"
+                        android:id="@+id/mars"
+                        android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:text="2.5"
                         android:textSize="20sp"
@@ -154,10 +159,11 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Janvier :"
+                        android:text="Avril      :"
                         android:textSize="20sp"/>
                     <EditText
-                        android:layout_width="wrap_content"
+                        android:id="@+id/avr"
+                        android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:text="2.5"
                         android:textSize="20sp"
@@ -176,10 +182,11 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Janvier :"
+                        android:text="Mai       :"
                         android:textSize="20sp"/>
                     <EditText
-                        android:layout_width="wrap_content"
+                        android:id="@+id/mai"
+                        android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:text="2.5"
                         android:textSize="20sp"
@@ -198,10 +205,11 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Janvier :"
+                        android:text="Juin      :"
                         android:textSize="20sp"/>
                     <EditText
-                        android:layout_width="wrap_content"
+                        android:id="@+id/juin"
+                        android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:text="2.5"
                         android:textSize="20sp"
@@ -230,10 +238,11 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Janvier :"
+                        android:text="Juillet         :"
                         android:textSize="20sp"/>
                     <EditText
-                        android:layout_width="wrap_content"
+                        android:id="@+id/juil"
+                        android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:text="2.5"
                         android:textSize="20sp"
@@ -252,10 +261,11 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Janvier :"
+                        android:text="Aout            :"
                         android:textSize="20sp"/>
                     <EditText
-                        android:layout_width="wrap_content"
+                        android:id="@+id/aout"
+                        android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:text="2.5"
                         android:textSize="20sp"
@@ -274,10 +284,11 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Janvier :"
+                        android:text="Septembre :"
                         android:textSize="20sp"/>
                     <EditText
-                        android:layout_width="wrap_content"
+                        android:id="@+id/sep"
+                        android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:text="2.5"
                         android:textSize="20sp"
@@ -296,10 +307,11 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Janvier :"
+                        android:text="Octobre      :"
                         android:textSize="20sp"/>
                     <EditText
-                        android:layout_width="wrap_content"
+                        android:id="@+id/oct"
+                        android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:text="2.5"
                         android:textSize="20sp"
@@ -318,10 +330,11 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Janvier :"
+                        android:text="Novembre  :"
                         android:textSize="20sp"/>
                     <EditText
-                        android:layout_width="wrap_content"
+                        android:id="@+id/nov"
+                        android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:text="2.5"
                         android:textSize="20sp"
@@ -340,10 +353,11 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Janvier :"
+                        android:text="Décembre  :"
                         android:textSize="20sp"/>
                     <EditText
-                        android:layout_width="wrap_content"
+                        android:id="@+id/dec"
+                        android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:text="2.5"
                         android:textSize="20sp"
@@ -363,7 +377,7 @@
             android:layout_gravity="center"
             android:text="Enregistrer"
             android:clickable="true"
-            android:onClick="enregistrer"
+            android:onClick="addCompte"
             android:textSize="20sp"
             android:layout_marginTop="20dp"
             android:paddingHorizontal="40dp"
