@@ -15,10 +15,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:padding="15dp"
+            android:paddingTop="13dp"
             android:text="Ajouter et modifier les informations ci-dessous pour créer un compte d'épargne"
             android:textAlignment="center"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -39,6 +39,55 @@
                 android:layout_height="wrap_content"
                 android:hint="écrivez un id"
                 android:inputType="text"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date de création :"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/jours"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="00"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/mois"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="00"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/annee"
+                android:layout_width="60dp"
+                android:inputType="number"
+                android:layout_height="wrap_content"
+                android:hint="0000"
                 android:textSize="18sp" />
         </LinearLayout>
 
@@ -429,8 +478,8 @@
                 android:id="@+id/solde_input"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:text="0"
                 android:inputType="numberDecimal"
+                android:text="0"
                 android:textSize="18sp" />
 
             <TextView
@@ -451,5 +500,7 @@
             android:paddingVertical="10dp"
             android:text="Enregistrer"
             android:textSize="20sp" />
+
+
     </LinearLayout>
 </RelativeLayout>

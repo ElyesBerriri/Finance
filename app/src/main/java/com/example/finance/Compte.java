@@ -4,6 +4,9 @@ public class Compte {
 
     public String id="";
     public float solde=0f;
+    public int jours;
+    public int mois;
+    public int annee;
     public float taux_impot=20f;
     public float taux_jan=2.5f;
     public float taux_fev=2.5f;
@@ -20,10 +23,13 @@ public class Compte {
 
     public Compte(){}
 
-    public Compte(String i, float s, float im, float jan, float fev, float mars, float avr, float mai, float jun,
+    public Compte(String i, int j, int m, int a, float s, float im, float jan, float fev, float mars, float avr, float mai, float jun,
                   float juil, float aout, float sep, float oct, float nov, float dec) {
         this.id = i;
         this.solde = s;
+        this.jours = j;
+        this.mois = m;
+        this.annee = a;
         this.taux_impot = im;
         this.taux_jan = jan;
         this.taux_fev = fev;

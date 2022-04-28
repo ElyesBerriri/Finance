@@ -72,13 +72,39 @@ public class NewEpargneActivity extends AppCompatActivity {
         EditText e14 = findViewById(R.id.solde_input);
         float solde = Float.parseFloat(e14.getText().toString().trim());
 
+        int j;
+        EditText e15 = findViewById(R.id.jours);
+        if(e15.getText().toString().equals(""))
+            j=0;
+        else
+            j = Integer.parseInt(e15.getText().toString().trim());
+
+        int m;
+        EditText e16 = findViewById(R.id.mois);
+        if(e16.getText().toString().equals(""))
+            m=0;
+        else
+            m = Integer.parseInt(e16.getText().toString().trim());
+
+        int a;
+        EditText e17 = findViewById(R.id.annee);
+        if(e17.getText().toString().equals(""))
+            a=0;
+        else
+            a = Integer.parseInt(e17.getText().toString().trim());
+
         reference = FirebaseDatabase.getInstance().getReference("comptes");
 
-        if(id.equals("")){
+        if(id.equals(""))
             Toast.makeText(NewEpargneActivity.this,"Tu dois donner un id au compte !",Toast.LENGTH_SHORT).show();
-        }
+        else if(j==0 || j>31)
+            Toast.makeText(NewEpargneActivity.this,"Tu dois préciser un jour valide !",Toast.LENGTH_SHORT).show();
+        else if(m==0 || m>12)
+            Toast.makeText(NewEpargneActivity.this,"Tu dois préciser un mois valide !",Toast.LENGTH_SHORT).show();
+        else if(a<1000)
+            Toast.makeText(NewEpargneActivity.this,"Tu dois préciser une année valide !",Toast.LENGTH_SHORT).show();
         else{
-            Compte compte = new Compte(id,solde,impot,jan,fev,mars,avr,mai,juin,juil,aout,sep,oct,nov,dec);
+            Compte compte = new Compte(id,j,m,a,solde,impot,jan,fev,mars,avr,mai,juin,juil,aout,sep,oct,nov,dec);
             reference.child(id).setValue(compte).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
