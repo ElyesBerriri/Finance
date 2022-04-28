@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -26,6 +28,7 @@ public class EpargneActivity extends AppCompatActivity {
     private MyAdapterComptes adapter;
     private ArrayList<Compte> list;
 
+    public static String choisie="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,8 +59,25 @@ public class EpargneActivity extends AppCompatActivity {
         });
     }
 
-    public void com(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+    public void valider(View view) {
+        boolean b=false;
+        EditText e = findViewById(R.id.a_choisir);
+        choisie = e.getText().toString().trim();
+
+        if(choisie.equals("")){
+            Toast.makeText(EpargneActivity.this,"Tu dois choisir un compte !",Toast.LENGTH_SHORT).show();
+        }
+        else{
+            for (Compte compte:list)
+                if(compte.id.equals(choisie))
+                    b=true;
+            if(b){
+                Intent intent = new Intent(this, SuivieActivity.class);
+                startActivity(intent);
+            }
+            else{
+                Toast.makeText(EpargneActivity.this,"L'id donné n'existe pas dans la liste !",Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 }

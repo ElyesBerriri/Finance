@@ -19,24 +19,27 @@
             android:text="Ajouter et modifier les informations ci-dessous pour créer un compte d'épargne"
             android:textAlignment="center"
             android:textSize="23sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:paddingHorizontal="10dp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ID du compte :"
-                android:textSize="20sp"/>
+                android:textSize="20sp" />
+
             <EditText
                 android:id="@+id/compte_id"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:hint="écrivez un id"
-                android:textSize="20sp"
-                android:inputType="text"/>
+                android:inputType="text"
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -44,181 +47,202 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:paddingHorizontal="10dp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Taux d'impôt :"
-                android:textSize="20sp"/>
+                android:textSize="20sp" />
+
             <EditText
                 android:id="@+id/impot"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
                 android:text="20"
-                android:textSize="20sp"
-                android:inputType="numberDecimal"/>
+                android:textSize="20sp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="%"
-                android:textSize="20sp"/>
+                android:textSize="20sp" />
         </LinearLayout>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
             android:text="Taux de rénumération par mois :"
-            android:textSize="20sp"
-            android:paddingHorizontal="10dp"/>
+            android:textSize="20sp" />
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_marginStart="10dp"
-                android:gravity="center_horizontal">
+                android:layout_marginEnd="30dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingHorizontal="10dp">
+                    android:orientation="horizontal">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Janvier :"
-                        android:textSize="20sp"/>
+                        android:text="Janv  :"
+                        android:textSize="20sp" />
 
                     <EditText
                         android:id="@+id/jan"
-                        android:layout_width="50dp"
+                        android:layout_width="60dp"
                         android:layout_height="wrap_content"
                         android:inputType="numberDecimal"
                         android:text="2.5"
-                        android:textSize="20sp"/>
+                        android:textSize="20sp" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="%"
-                        android:textSize="20sp"/>
+                        android:textSize="20sp" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingHorizontal="10dp">
+                    android:orientation="horizontal">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Février  :"
-                        android:textSize="20sp"/>
+                        android:text="Févr   :"
+                        android:textSize="20sp" />
+
                     <EditText
                         android:id="@+id/fev"
-                        android:layout_width="50dp"
+                        android:layout_width="60dp"
                         android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
                         android:text="2.5"
-                        android:textSize="20sp"
-                        android:inputType="numberDecimal"/>
+                        android:textSize="20sp" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="%"
-                        android:textSize="20sp"/>
+                        android:textSize="20sp" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingHorizontal="10dp">
+                    android:orientation="horizontal">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Mars     :"
-                        android:textSize="20sp"/>
+                        android:text="Mars :"
+                        android:textSize="20sp" />
+
                     <EditText
                         android:id="@+id/mars"
-                        android:layout_width="50dp"
+                        android:layout_width="60dp"
                         android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
                         android:text="2.5"
-                        android:textSize="20sp"
-                        android:inputType="numberDecimal"/>
+                        android:textSize="20sp" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="%"
-                        android:textSize="20sp"/>
+                        android:textSize="20sp" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingHorizontal="10dp">
+                    android:orientation="horizontal">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Avril      :"
-                        android:textSize="20sp"/>
+                        android:text="Avril  :"
+                        android:textSize="20sp" />
+
                     <EditText
                         android:id="@+id/avr"
-                        android:layout_width="50dp"
+                        android:layout_width="60dp"
                         android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
                         android:text="2.5"
-                        android:textSize="20sp"
-                        android:inputType="numberDecimal" />
+                        android:textSize="20sp" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="%"
-                        android:textSize="20sp"/>
+                        android:textSize="20sp" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingHorizontal="10dp">
+                    android:orientation="horizontal">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Mai       :"
-                        android:textSize="20sp"/>
+                        android:text="Mai   :"
+                        android:textSize="20sp" />
+
                     <EditText
                         android:id="@+id/mai"
-                        android:layout_width="50dp"
+                        android:layout_width="60dp"
                         android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
                         android:text="2.5"
-                        android:textSize="20sp"
-                        android:inputType="numberDecimal" />
+                        android:textSize="20sp" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="%"
-                        android:textSize="20sp"/>
+                        android:textSize="20sp" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingHorizontal="10dp">
+                    android:orientation="horizontal">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Juin      :"
-                        android:textSize="20sp"/>
+                        android:text="Juin  :"
+                        android:textSize="20sp" />
+
                     <EditText
                         android:id="@+id/juin"
-                        android:layout_width="50dp"
+                        android:layout_width="60dp"
                         android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
                         android:text="2.5"
-                        android:textSize="20sp"
-                        android:inputType="numberDecimal" />
+                        android:textSize="20sp" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="%"
-                        android:textSize="20sp"/>
+                        android:textSize="20sp" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -226,162 +250,180 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
                 android:layout_marginStart="10dp"
-                android:gravity="center_horizontal">
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingHorizontal="10dp">
+                    android:orientation="horizontal">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Juillet         :"
-                        android:textSize="20sp"/>
+                        android:text="Juill :"
+                        android:textSize="20sp" />
+
                     <EditText
                         android:id="@+id/juil"
-                        android:layout_width="50dp"
+                        android:layout_width="60dp"
                         android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
                         android:text="2.5"
-                        android:textSize="20sp"
-                        android:inputType="numberDecimal"/>
+                        android:textSize="20sp" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="%"
-                        android:textSize="20sp"/>
+                        android:textSize="20sp" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingHorizontal="10dp">
+                    android:orientation="horizontal">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Aout            :"
-                        android:textSize="20sp"/>
+                        android:text="Août :"
+                        android:textSize="20sp" />
+
                     <EditText
                         android:id="@+id/aout"
-                        android:layout_width="50dp"
+                        android:layout_width="60dp"
                         android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
                         android:text="2.5"
-                        android:textSize="20sp"
-                        android:inputType="numberDecimal"/>
+                        android:textSize="20sp" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="%"
-                        android:textSize="20sp"/>
+                        android:textSize="20sp" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingHorizontal="10dp">
+                    android:orientation="horizontal">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Septembre :"
-                        android:textSize="20sp"/>
+                        android:text="Sept :"
+                        android:textSize="20sp" />
+
                     <EditText
                         android:id="@+id/sep"
-                        android:layout_width="50dp"
+                        android:layout_width="60dp"
                         android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
                         android:text="2.5"
-                        android:textSize="20sp"
-                        android:inputType="numberDecimal"/>
+                        android:textSize="20sp" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="%"
-                        android:textSize="20sp"/>
+                        android:textSize="20sp" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingHorizontal="10dp">
+                    android:orientation="horizontal">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Octobre      :"
-                        android:textSize="20sp"/>
+                        android:text="Oct   :"
+                        android:textSize="20sp" />
+
                     <EditText
                         android:id="@+id/oct"
-                        android:layout_width="50dp"
+                        android:layout_width="60dp"
                         android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
                         android:text="2.5"
-                        android:textSize="20sp"
-                        android:inputType="numberDecimal"/>
+                        android:textSize="20sp" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="%"
-                        android:textSize="20sp"/>
+                        android:textSize="20sp" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingHorizontal="10dp">
+                    android:orientation="horizontal">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Novembre  :"
-                        android:textSize="20sp"/>
+                        android:text="Nov  :"
+                        android:textSize="20sp" />
+
                     <EditText
                         android:id="@+id/nov"
-                        android:layout_width="50dp"
+                        android:layout_width="60dp"
                         android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
                         android:text="2.5"
-                        android:textSize="20sp"
-                        android:inputType="numberDecimal"/>
+                        android:textSize="20sp" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="%"
-                        android:textSize="20sp"/>
+                        android:textSize="20sp" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingHorizontal="10dp">
+                    android:orientation="horizontal">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Décembre  :"
-                        android:textSize="20sp"/>
+                        android:text="Déc  :"
+                        android:textSize="20sp" />
+
                     <EditText
                         android:id="@+id/dec"
-                        android:layout_width="50dp"
+                        android:layout_width="60dp"
                         android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
                         android:text="2.5"
-                        android:textSize="20sp"
-                        android:inputType="numberDecimal"/>
+                        android:textSize="20sp" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="%"
-                        android:textSize="20sp"/>
+                        android:textSize="20sp" />
                 </LinearLayout>
 
             </LinearLayout>
         </LinearLayout>
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Enregistrer"
+            android:layout_marginTop="20dp"
             android:clickable="true"
             android:onClick="addCompte"
-            android:textSize="20sp"
-            android:layout_marginTop="20dp"
             android:paddingHorizontal="40dp"
-            android:paddingVertical="10dp"/>
+            android:paddingVertical="10dp"
+            android:text="Enregistrer"
+            android:textSize="20sp" />
 
     </LinearLayout>
 </RelativeLayout>

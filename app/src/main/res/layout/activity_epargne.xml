@@ -18,11 +18,32 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Choisir l'un des comptes suivants"
+            android:text="Choisir l'un des comptes suivants en écrivant son ID"
             android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
             android:textAlignment="center"
             android:textSize="23sp"
             android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/a_choisir"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:hint="écrivez ici"
+                android:textSize="25sp"
+                android:layout_marginEnd="30dp"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Valider le choix"
+                android:clickable="true"
+                android:onClick="valider"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/list_comptes"
@@ -30,5 +51,6 @@
             android:layout_height="match_parent"
             android:layout_marginVertical="10dp"
             android:paddingHorizontal="30dp" />
+
     </LinearLayout>
 </RelativeLayout>

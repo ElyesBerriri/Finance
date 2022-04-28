@@ -79,7 +79,6 @@ public class NewEpargneActivity extends AppCompatActivity {
             reference.child(id).setValue(compte).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
-
                     if (task.isSuccessful()){
                         startActivity(new Intent(NewEpargneActivity.this, MainActivity.class));
                         Toast.makeText(NewEpargneActivity.this,"Le compte est ajouté avec succés !",Toast.LENGTH_SHORT).show();
