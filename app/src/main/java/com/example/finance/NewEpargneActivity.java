@@ -69,13 +69,16 @@ public class NewEpargneActivity extends AppCompatActivity {
         EditText e13 = (EditText) findViewById(R.id.dec);
         float dec = Float.parseFloat(e13.getText().toString().trim());
 
+        EditText e14 = findViewById(R.id.solde_input);
+        float solde = Float.parseFloat(e14.getText().toString().trim());
+
         reference = FirebaseDatabase.getInstance().getReference("comptes");
 
         if(id.equals("")){
             Toast.makeText(NewEpargneActivity.this,"Tu dois donner un id au compte !",Toast.LENGTH_SHORT).show();
         }
         else{
-            Compte compte = new Compte(id,impot,jan,fev,mars,avr,mai,juin,juil,aout,sep,oct,nov,dec);
+            Compte compte = new Compte(id,solde,impot,jan,fev,mars,avr,mai,juin,juil,aout,sep,oct,nov,dec);
             reference.child(id).setValue(compte).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
