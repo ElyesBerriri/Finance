@@ -41,13 +41,12 @@ public class EpargneActivity extends AppCompatActivity {
         list = new ArrayList<>();
         adapter = new MyAdapterComptes(this, list);
         recyclerView.setAdapter(adapter);
-        Query Topteams = root.orderByChild("comptes")/*.limitToLast(1)*/;
-        Topteams.addValueEventListener(new ValueEventListener() {
+        Query Topteams = root.orderByChild("comptes");
+        Topteams.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                     Compte model = dataSnapshot.getValue(Compte.class);
-                    //if (model.getConcours().equals("junior") && model.getScore_jury() > -1)
                         list.add(model);
                 }
                 adapter.notifyDataSetChanged();

@@ -31,35 +31,54 @@
             android:textSize="27sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/solde"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="SOLDE"
-            android:textSize="20sp"
-            android:layout_marginVertical="10dp"/>
+            android:orientation="horizontal"
+            android:paddingVertical="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="SOLDE : "
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/solde"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:text="SOLDE"
+                android:textSize="20sp" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Opération :"
-                android:textSize="20sp"/>
+                android:textSize="20sp" />
+
             <CheckBox
                 android:id="@+id/versement"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
                 android:hint="Versement"
-                android:layout_marginHorizontal="10dp"/>
+                android:onClick="stopRet" />
+
             <CheckBox
                 android:id="@+id/retrait"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="Retrait"/>
+                android:hint="Retrait"
+                android:onClick="stopVers" />
         </LinearLayout>
 
         <LinearLayout
@@ -80,7 +99,7 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:inputType="numberDecimal"/>
+                android:inputType="numberDecimal" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -138,6 +157,7 @@
                 android:inputType="number"
                 android:textSize="18sp" />
         </LinearLayout>
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -152,7 +172,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Vous pouver prévoir votre solde en fixant une date et en tapant sur RAFRAICHIR"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
