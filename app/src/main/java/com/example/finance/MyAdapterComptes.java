@@ -29,7 +29,7 @@ public class MyAdapterComptes extends RecyclerView.Adapter<MyAdapterComptes.MyVi
     @Override
     public void onBindViewHolder(@NonNull MyAdapterComptes.MyViewHolder holder , int position){
         Compte model = mList.get(position);
-        holder.name.setText(model.get_id());
+        holder.name.setText(model.getId());
     }
 
     @Override
