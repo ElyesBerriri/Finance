@@ -49,7 +49,8 @@ public class SuivieActivity extends AppCompatActivity {
     public void obtenir_solde(View view) {
         reference = FirebaseDatabase.getInstance().getReference("comptes");
         TextView soldeText = findViewById(R.id.solde);
-        reference.addValueEventListener(new ValueEventListener() {
+
+        reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 DataSnapshot dataSnapshot = snapshot.child(id);
@@ -89,43 +90,37 @@ public class SuivieActivity extends AppCompatActivity {
                 float oct= compte.getTaux_oct();
                 float nov= compte.getTaux_nov();
                 float dec= compte.getTaux_dec();
-                int n=0;
-                float[] tab = new float[3];
+                float[] tab = new float[2];
 
                 for(int i=a;i<=aa;i++){
-                    System.out.println("/////////////////// "+i+" ////////////////////");
                     if(i==a && i==aa){
                         for(int l=m;l<=ma;l++){
                             if(l==m && l==ma){
                                 for(int k=j;k<=ja;k++){
-                                    tab=traitement(l,k,n,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
-                                    n=(int)tab[0];
-                                    solde=tab[1];
-                                    inter=tab[2];
+                                    tab=traitement(l,k,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
+                                    solde=tab[0];
+                                    inter=tab[1];
                                 }
                             }
                             else if(l==m){
                                 for(int k=j;k<=30;k++){
-                                    tab=traitement(l,k,n,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
-                                    n=(int)tab[0];
-                                    solde=tab[1];
-                                    inter=tab[2];
+                                    tab=traitement(l,k,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
+                                    solde=tab[0];
+                                    inter=tab[1];
                                 }
                             }
                             else if(l==ma){
                                 for(int k=1;k<=ja;k++){
-                                    tab=traitement(l,k,n,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
-                                    n=(int)tab[0];
-                                    solde=tab[1];
-                                    inter=tab[2];
+                                    tab=traitement(l,k,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
+                                    solde=tab[0];
+                                    inter=tab[1];
                                 }
                             }
                             else{
                                 for(int k=1;k<=30;k++){
-                                    tab=traitement(l,k,n,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
-                                    n=(int)tab[0];
-                                    solde=tab[1];
-                                    inter=tab[2];
+                                    tab=traitement(l,k,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
+                                    solde=tab[0];
+                                    inter=tab[1];
                                 }
                             }
                         }
@@ -134,18 +129,16 @@ public class SuivieActivity extends AppCompatActivity {
                         for(int l=m;l<=12;l++){
                             if(l==m){
                                 for(int k=j;k<=30;k++){
-                                    tab=traitement(l,k,n,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
-                                    n=(int)tab[0];
-                                    solde=tab[1];
-                                    inter=tab[2];
+                                    tab=traitement(l,k,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
+                                    solde=tab[0];
+                                    inter=tab[1];
                                 }
                             }
                             else{
                                 for(int k=1;k<=30;k++){
-                                    tab=traitement(l,k,n,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
-                                    n=(int)tab[0];
-                                    solde=tab[1];
-                                    inter=tab[2];
+                                    tab=traitement(l,k,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
+                                    solde=tab[0];
+                                    inter=tab[1];
                                 }
                             }
                         }
@@ -154,18 +147,16 @@ public class SuivieActivity extends AppCompatActivity {
                         for(int l=1;l<=ma;l++){
                             if(l==ma){
                                 for(int k=1;k<=ja;k++){
-                                    tab=traitement(l,k,n,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
-                                    n=(int)tab[0];
-                                    solde=tab[1];
-                                    inter=tab[2];
+                                    tab=traitement(l,k,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
+                                    solde=tab[0];
+                                    inter=tab[1];
                                 }
                             }
                             else{
                                 for(int k=1;k<=30;k++){
-                                    tab=traitement(l,k,n,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
-                                    n=(int)tab[0];
-                                    solde=tab[1];
-                                    inter=tab[2];
+                                    tab=traitement(l,k,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
+                                    solde=tab[0];
+                                    inter=tab[1];
                                 }
                             }
                         }
@@ -173,10 +164,9 @@ public class SuivieActivity extends AppCompatActivity {
                     else{
                         for(int l=1;l<=12;l++)
                             for(int k=1;k<=30;k++){
-                                tab=traitement(l,k,n,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
-                                n=(int)tab[0];
-                                solde=tab[1];
-                                inter=tab[2];
+                                tab=traitement(l,k,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
+                                solde=tab[0];
+                                inter=tab[1];
                             }
                     }
                 }
@@ -185,10 +175,10 @@ public class SuivieActivity extends AppCompatActivity {
                 compte.setSolde(solde);
                 compte.setSolde2(solde2);
                 compte.setInteret(inter);
-                //reference.child(id).child("solde").setValue((double)solde);
-                //reference.child(id).child("interet").setValue((double)inter);
-                //reference.child(id).child("solde2").setValue((double)solde2);
-                soldeText.setText(solde2+" DT");
+                if(aa>a || (aa==a && ma<m) || (aa==a && ma==m && ja<j))
+                    soldeText.setText(solde+" DT");
+                else
+                    soldeText.setText(solde2+" DT");
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {}
@@ -197,11 +187,9 @@ public class SuivieActivity extends AppCompatActivity {
     }
 
     public void operation(View view){
-
-        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
         reference = FirebaseDatabase.getInstance().getReference("comptes");
         TextView soldeText = findViewById(R.id.solde);
-        reference.addValueEventListener(new ValueEventListener() {
+        reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 DataSnapshot dataSnapshot = snapshot.child(id);
@@ -249,11 +237,11 @@ public class SuivieActivity extends AppCompatActivity {
                 float oct= compte.getTaux_oct();
                 float nov= compte.getTaux_nov();
                 float dec= compte.getTaux_dec();
-                int n=0;
-                float[] tab = new float[3];
+                float[] tab = new float[2];
                 int js=jo,ms=mo,as=ao;
 
                 if(ver.isChecked() && !ret.isChecked()){
+
                     jo=jo+7;
                     if(jo>30){
                         jo=jo%31+1;
@@ -268,41 +256,41 @@ public class SuivieActivity extends AppCompatActivity {
                         if(i==a && i==ao){
                             for(int l=m;l<=mo;l++){
                                 if(l==m && l==mo){
-                                    for(int k=j;k<=jo;k++){
-                                        tab=traitement(l,k,n,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
-                                        n=(int)tab[0];
-                                        solde=tab[1];
-                                        inter=tab[2];
+                                    for(int k=j;k<jo;k++){
+                                        tab=traitement(l,k,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
+                                        solde=tab[0];
+                                        inter=tab[1];
+                                        System.out.println("/////// "+inter+" /////////");
                                         if(k==js && l==ms && i==as)
                                             solde2=solde;
                                     }
                                 }
                                 else if(l==m){
                                     for(int k=j;k<=30;k++){
-                                        tab=traitement(l,k,n,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
-                                        n=(int)tab[0];
-                                        solde=tab[1];
-                                        inter=tab[2];
+                                        tab=traitement(l,k,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
+                                        solde=tab[0];
+                                        inter=tab[1];
+                                        System.out.println("/////// "+inter+" /////////");
                                         if(k==js && l==ms && i==as)
                                             solde2=solde;
                                     }
                                 }
                                 else if(l==mo){
-                                    for(int k=1;k<=jo;k++){
-                                        tab=traitement(l,k,n,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
-                                        n=(int)tab[0];
-                                        solde=tab[1];
-                                        inter=tab[2];
+                                    for(int k=1;k<jo;k++){
+                                        tab=traitement(l,k,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
+                                        solde=tab[0];
+                                        inter=tab[1];
+                                        System.out.println("/////// "+inter+" /////////");
                                         if(k==js && l==ms && i==as)
                                             solde2=solde;
                                     }
                                 }
                                 else{
                                     for(int k=1;k<=30;k++){
-                                        tab=traitement(l,k,n,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
-                                        n=(int)tab[0];
-                                        solde=tab[1];
-                                        inter=tab[2];
+                                        tab=traitement(l,k,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
+                                        solde=tab[0];
+                                        inter=tab[1];
+                                        System.out.println("/////// "+inter+" /////////");
                                         if(k==js && l==ms && i==as)
                                             solde2=solde;
                                     }
@@ -313,20 +301,20 @@ public class SuivieActivity extends AppCompatActivity {
                             for(int l=m;l<=12;l++){
                                 if(l==m){
                                     for(int k=j;k<=30;k++){
-                                        tab=traitement(l,k,n,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
-                                        n=(int)tab[0];
-                                        solde=tab[1];
-                                        inter=tab[2];
+                                        tab=traitement(l,k,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
+                                        solde=tab[0];
+                                        inter=tab[1];
+                                        System.out.println("/////// "+inter+" /////////");
                                         if(k==js && l==ms && i==as)
                                             solde2=solde;
                                     }
                                 }
                                 else{
                                     for(int k=1;k<=30;k++){
-                                        tab=traitement(l,k,n,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
-                                        n=(int)tab[0];
-                                        solde=tab[1];
-                                        inter=tab[2];
+                                        tab=traitement(l,k,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
+                                        solde=tab[0];
+                                        inter=tab[1];
+                                        System.out.println("/////// "+inter+" /////////");
                                         if(k==js && l==ms && i==as)
                                             solde2=solde;
                                     }
@@ -336,21 +324,21 @@ public class SuivieActivity extends AppCompatActivity {
                         else if(i==ao){
                             for(int l=1;l<=mo;l++){
                                 if(l==mo){
-                                    for(int k=1;k<=jo;k++){
-                                        tab=traitement(l,k,n,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
-                                        n=(int)tab[0];
-                                        solde=tab[1];
-                                        inter=tab[2];
+                                    for(int k=1;k<jo;k++){
+                                        tab=traitement(l,k,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
+                                        solde=tab[0];
+                                        inter=tab[1];
+                                        System.out.println("/////// "+inter+" /////////");
                                         if(k==js && l==ms && i==as)
                                             solde2=solde;
                                     }
                                 }
                                 else{
                                     for(int k=1;k<=30;k++){
-                                        tab=traitement(l,k,n,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
-                                        n=(int)tab[0];
-                                        solde=tab[1];
-                                        inter=tab[2];
+                                        tab=traitement(l,k,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
+                                        solde=tab[0];
+                                        inter=tab[1];
+                                        System.out.println("/////// "+inter+" /////////");
                                         if(k==js && l==ms && i==as)
                                             solde2=solde;
                                     }
@@ -360,16 +348,16 @@ public class SuivieActivity extends AppCompatActivity {
                         else{
                             for(int l=1;l<=12;l++)
                                 for(int k=1;k<=30;k++){
-                                    tab=traitement(l,k,n,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
-                                    n=(int)tab[0];
-                                    solde=tab[1];
-                                    inter=tab[2];
+                                    tab=traitement(l,k,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
+                                    solde=tab[0];
+                                    inter=tab[1];
+                                    System.out.println("/////// "+inter+" /////////");
                                     if(k==js && l==ms && i==as)
                                         solde2=solde;
                                 }
                         }
                     }
-
+                    solde+=montant;
                     solde2+=montant;
                     compte.setSolde2(solde2);
                     compte.setSolde(solde);
@@ -391,45 +379,42 @@ public class SuivieActivity extends AppCompatActivity {
                             as--;
                         }
                     }
+                    
                     for(int i=a;i<=ao;i++){
                         if(i==a && i==ao){
                             for(int l=m;l<=mo;l++){
                                 if(l==m && l==mo){
-                                    for(int k=j;k<=jo;k++){
-                                        tab=traitement(l,k,n,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
-                                        n=(int)tab[0];
-                                        solde=tab[1];
-                                        inter=tab[2];
+                                    for(int k=j;k<jo;k++){
+                                        tab=traitement(l,k,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
+                                        solde=tab[0];
+                                        inter=tab[1];
                                         if(k==js && l==ms && i==as)
                                             solde-=montant;
                                     }
                                 }
                                 else if(l==m){
                                     for(int k=j;k<=30;k++){
-                                        tab=traitement(l,k,n,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
-                                        n=(int)tab[0];
-                                        solde=tab[1];
-                                        inter=tab[2];
+                                        tab=traitement(l,k,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
+                                        solde=tab[0];
+                                        inter=tab[1];
                                         if(k==js && l==ms && i==as)
                                             solde-=montant;
                                     }
                                 }
                                 else if(l==mo){
-                                    for(int k=1;k<=jo;k++){
-                                        tab=traitement(l,k,n,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
-                                        n=(int)tab[0];
-                                        solde=tab[1];
-                                        inter=tab[2];
+                                    for(int k=1;k<jo;k++){
+                                        tab=traitement(l,k,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
+                                        solde=tab[0];
+                                        inter=tab[1];
                                         if(k==js && l==ms && i==as)
                                             solde-=montant;
                                     }
                                 }
                                 else{
                                     for(int k=1;k<=30;k++){
-                                        tab=traitement(l,k,n,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
-                                        n=(int)tab[0];
-                                        solde=tab[1];
-                                        inter=tab[2];
+                                        tab=traitement(l,k,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
+                                        solde=tab[0];
+                                        inter=tab[1];
                                         if(k==js && l==ms && i==as)
                                             solde-=montant;
                                     }
@@ -440,20 +425,18 @@ public class SuivieActivity extends AppCompatActivity {
                             for(int l=m;l<=12;l++){
                                 if(l==m){
                                     for(int k=j;k<=30;k++){
-                                        tab=traitement(l,k,n,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
-                                        n=(int)tab[0];
-                                        solde=tab[1];
-                                        inter=tab[2];
+                                        tab=traitement(l,k,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
+                                        solde=tab[0];
+                                        inter=tab[1];
                                         if(k==js && l==ms && i==as)
                                             solde-=montant;
                                     }
                                 }
                                 else{
                                     for(int k=1;k<=30;k++){
-                                        tab=traitement(l,k,n,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
-                                        n=(int)tab[0];
-                                        solde=tab[1];
-                                        inter=tab[2];
+                                        tab=traitement(l,k,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
+                                        solde=tab[0];
+                                        inter=tab[1];
                                         if(k==js && l==ms && i==as)
                                             solde-=montant;
                                     }
@@ -463,21 +446,19 @@ public class SuivieActivity extends AppCompatActivity {
                         else if(i==ao){
                             for(int l=1;l<=mo;l++){
                                 if(l==mo){
-                                    for(int k=1;k<=jo;k++){
-                                        tab=traitement(l,k,n,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
-                                        n=(int)tab[0];
-                                        solde=tab[1];
-                                        inter=tab[2];
+                                    for(int k=1;k<jo;k++){
+                                        tab=traitement(l,k,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
+                                        solde=tab[0];
+                                        inter=tab[1];
                                         if(k==js && l==ms && i==as)
                                             solde-=montant;
                                     }
                                 }
                                 else{
                                     for(int k=1;k<=30;k++){
-                                        tab=traitement(l,k,n,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
-                                        n=(int)tab[0];
-                                        solde=tab[1];
-                                        inter=tab[2];
+                                        tab=traitement(l,k,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
+                                        solde=tab[0];
+                                        inter=tab[1];
                                         if(k==js && l==ms && i==as)
                                             solde-=montant;
                                     }
@@ -487,17 +468,17 @@ public class SuivieActivity extends AppCompatActivity {
                         else{
                             for(int l=1;l<=12;l++)
                                 for(int k=1;k<=30;k++){
-                                    tab=traitement(l,k,n,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
-                                    n=(int)tab[0];
-                                    solde=tab[1];
-                                    inter=tab[2];
+                                    tab=traitement(l,k,solde,inter,impot,jan,fev,mars,avr,mai,juin,juil,aout,sept,oct,nov,dec);
+                                    solde=tab[0];
+                                    inter=tab[1];
                                     if(k==js && l==ms && i==as)
                                         solde-=montant;
                                 }
                         }
                     }
+
                     solde2=solde;
-                    compte.setSolde2(solde);
+                    compte.setSolde2(solde2);
                     compte.setSolde(solde);
                     compte.setInteret(inter);
                     compte.setJour(jo);
@@ -506,15 +487,10 @@ public class SuivieActivity extends AppCompatActivity {
                     soldeText.setText(solde2+" DT");
                     reference.child(id).setValue(compte);
                 }
-
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {}
         });
-    }
-
-    public float interet(int n,float t,float s,float i){
-        return ((float)n/360)*t*s*(1-i);
     }
 
     public boolean ferier(int j,int m){
@@ -522,98 +498,77 @@ public class SuivieActivity extends AppCompatActivity {
                 (j == 25 && m == 7) || (j == 13 && m == 8) || (j == 15 && m == 10) || (j == 17 && m == 12);
     }
 
-    public float[] traitement(int l,int k,int n,float solde,float inter,float impot,float jan,float fev,float mars
+    public float[] traitement(int l,int k,float solde,float inter,float impot,float jan,float fev,float mars
             ,float avr,float mai,float juin,float juil,float aout,float sept,float oct,float nov,float dec){
 
-        float[] tab = new float[3];
-
-        if(k==1){
-            if(l==1){
-                solde+=interet(n,dec,solde,impot)+inter*(1-impot);
+        float[] tab = new float[2];
+        if(l==1){
+            if(k==1) {
+                solde += inter * (100 - impot)/100;
                 inter=0;
-                n=0;
-                if(!ferier(k,l))
-                    n++;
             }
-            if(l==2){
-                inter+=interet(n,jan,solde,impot);
-                n=0;
-                if(!ferier(k,l))
-                    n++;
-            }
-            if(l==3){
-                inter+=interet(n,fev,solde,impot);
-                n=0;
-                if(!ferier(k,l))
-                    n++;
-            }
-            if(l==4){
-                solde+=interet(n,mars,solde,impot)+inter*(1-impot);
-                inter=0;
-                n=0;
-                if(!ferier(k,l))
-                    n++;
-            }
-            if(l==5){
-                inter+=interet(n,avr,solde,impot);
-                n=0;
-                if(!ferier(k,l))
-                    n++;
-            }
-            if(l==6){
-                inter+=interet(n,mai,solde,impot);
-                n=0;
-                if(!ferier(k,l))
-                    n++;
-            }
-            if(l==7){
-                solde+=interet(n,juin,solde,impot)+inter*(1-impot);
-                inter=0;
-                n=0;
-                if(!ferier(k,l))
-                    n++;
-            }
-            if(l==8){
-                inter+=interet(n,juil,solde,impot);
-                n=0;
-                if(!ferier(k,l))
-                    n++;
-            }
-            if(l==9){
-                inter+=interet(n,aout,solde,impot);
-                n=0;
-                if(!ferier(k,l))
-                    n++;
-            }
-            if(l==10){
-                solde+=interet(n,sept,solde,impot)+inter*(1-impot);
-                inter=0;
-                n=0;
-                if(!ferier(k,l))
-                    n++;
-            }
-            if(l==11){
-                inter+=interet(n,oct,solde,impot);
-                n=0;
-                if(!ferier(k,l))
-                    n++;
-            }
-            if(l==12){
-                inter+=interet(n,nov,solde,impot);
-                n=0;
-                if(!ferier(k,l))
-                    n++;
-            }
-        }
-        else{
             if(!ferier(k,l))
-                n++;
+                inter+=jan*solde/36000;
+        }
+        if(l==2){
+            if(!ferier(k,l))
+                inter+=fev*solde/36000;
+        }
+        if(l==3){
+            if(!ferier(k,l))
+                inter+=mars*solde/36000;
+        }
+        if(l==4){
+            if(k==1) {
+                solde += inter * (100 - impot)/100;
+                inter=0;
+            }
+            if(!ferier(k,l))
+                inter+=avr*solde/36000;
+        }
+        if(l==5){
+            if(!ferier(k,l))
+                inter+=mai*solde/36000;
+        }
+        if(l==6){
+            if(!ferier(k,l))
+                inter+=juin*solde/36000;
+        }
+        if(l==7){
+            if(k==1) {
+                solde += inter * (100 - impot)/100;
+                inter=0;
+            }
+            if(!ferier(k,l))
+                inter+=juil*solde/36000;
+        }
+        if(l==8){
+            if(!ferier(k,l))
+                inter+=aout*solde/36000;
+        }
+        if(l==9){
+            if(!ferier(k,l))
+                inter+=sept*solde/36000;
+        }
+        if(l==10){
+            if(k==1) {
+                solde += inter * (100 - impot)/100;
+                inter=0;
+            }
+            if(!ferier(k,l))
+                inter+=oct*solde/36000;
+        }
+        if(l==11){
+            if(!ferier(k,l))
+                inter+=nov*solde/36000;
+        }
+        if(l==12){
+            if(!ferier(k,l))
+                inter+=dec*solde/36000;
         }
 
-        tab[0]=(float)n;
-        tab[1]=solde;
-        tab[2]=inter;
-
+        tab[0]=solde;
+        tab[1]=inter;
         return tab;
     }
 }

@@ -9,19 +9,19 @@ public class Compte {
     public int jour;
     public int mois;
     public int annee;
-    public float taux_impot=20f/100;
-    public float taux_jan=2.5f/100;
-    public float taux_fev=2.5f/100;
-    public float taux_mars=2.5f/100;
-    public float taux_avr=2.5f/100;
-    public float taux_mai=2.5f/100;
-    public float taux_jun=2.5f/100;
-    public float taux_juil=2.5f/100;
-    public float taux_aout=2.5f/100;
-    public float taux_sep=2.5f/100;
-    public float taux_oct=2.5f/100;
-    public float taux_nov=2.5f/100;
-    public float taux_dec=2.5f/100;
+    public float taux_impot=20f;
+    public float taux_jan=2.5f;
+    public float taux_fev=2.5f;
+    public float taux_mars=2.5f;
+    public float taux_avr=2.5f;
+    public float taux_mai=2.5f;
+    public float taux_jun=2.5f;
+    public float taux_juil=2.5f;
+    public float taux_aout=2.5f;
+    public float taux_sep=2.5f;
+    public float taux_oct=2.5f;
+    public float taux_nov=2.5f;
+    public float taux_dec=2.5f;
 
     public Compte(){}
 
@@ -34,19 +34,19 @@ public class Compte {
         this.jour = j;
         this.mois = m;
         this.annee = a;
-        this.taux_impot = im/100;
-        this.taux_jan = jan/100;
-        this.taux_fev = fev/100;
-        this.taux_mars = mars/100;
-        this.taux_avr = avr/100;
-        this.taux_mai = mai/100;
-        this.taux_jun = jun/100;
-        this.taux_juil = juil/100;
-        this.taux_aout = aout/100;
-        this.taux_sep = sep/100;
-        this.taux_oct = oct/100;
-        this.taux_nov = nov/100;
-        this.taux_dec = dec/100;
+        this.taux_impot = im;
+        this.taux_jan = jan;
+        this.taux_fev = fev;
+        this.taux_mars = mars;
+        this.taux_avr = avr;
+        this.taux_mai = mai;
+        this.taux_jun = jun;
+        this.taux_juil = juil;
+        this.taux_aout = aout;
+        this.taux_sep = sep;
+        this.taux_oct = oct;
+        this.taux_nov = nov;
+        this.taux_dec = dec;
     }
 
     public String getId() {

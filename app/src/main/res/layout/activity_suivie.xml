@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="Suivie du compte "
-            android:textSize="30sp" />
+            android:textSize="25sp" />
 
         <TextView
             android:id="@+id/choisie"
@@ -28,66 +28,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="test"
-            android:textSize="30sp"
+            android:textSize="27sp"
             android:textStyle="bold" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Date actuelle :"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/jours_suivie"
-                android:layout_width="40dp"
-                android:layout_height="wrap_content"
-                android:hint="  jj"
-                android:inputType="number"
-                android:textSize="18sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="/"
-                android:textSize="18sp" />
-
-            <EditText
-                android:id="@+id/mois_suivie"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:hint="mm"
-                android:inputType="number"
-                android:textSize="18sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="/"
-                android:textSize="18sp" />
-
-            <EditText
-                android:id="@+id/annee_suivie"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:hint="aaaa"
-                android:inputType="number"
-                android:textSize="18sp" />
-        </LinearLayout>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginVertical="5dp"
-            android:clickable="true"
-            android:onClick="obtenir_solde"
-            android:text="Rafraîchir le solde"
-            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/solde"
@@ -101,8 +43,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp">
+            android:orientation="horizontal">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -206,6 +147,71 @@
             android:onClick="operation"
             android:text="Valider l'opération"
             android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vous pouver prévoir votre solde en fixant une date et en tapant sur RAFRAICHIR"
+            android:textSize="18sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date :"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/jours_suivie"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:hint="  jj"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/mois_suivie"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:hint="mm"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/annee_suivie"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:hint="aaaa"
+                android:inputType="number"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="5dp"
+            android:clickable="true"
+            android:onClick="obtenir_solde"
+            android:text="Rafraîchir le solde"
+            android:textSize="15sp" />
+
 
     </LinearLayout>
 </RelativeLayout>
