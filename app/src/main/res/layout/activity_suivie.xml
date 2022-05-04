@@ -35,13 +35,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingVertical="5dp">
+            android:paddingVertical="15dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="SOLDE : "
+                android:text="Solde : "
                 android:textSize="20sp" />
 
             <TextView
@@ -171,7 +171,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Vous pouver prévoir votre solde en fixant une date et en tapant sur RAFRAICHIR"
+            android:text="Vous pouver prévoir votre solde en fixant une date et en tapant sur PREVOIR LE SOLDE"
             android:textSize="18sp" />
 
         <LinearLayout
@@ -222,6 +222,29 @@
                 android:textSize="18sp" />
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Solde Prévue: "
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/soldePrev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:text="SOLDE"
+                android:textSize="20sp" />
+        </LinearLayout>
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -229,7 +252,7 @@
             android:layout_marginVertical="5dp"
             android:clickable="true"
             android:onClick="obtenir_solde"
-            android:text="Rafraîchir le solde"
+            android:text="Prévoir le solde"
             android:textSize="15sp" />
 
 

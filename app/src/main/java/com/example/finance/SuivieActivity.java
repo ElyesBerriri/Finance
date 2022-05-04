@@ -42,7 +42,7 @@ public class SuivieActivity extends AppCompatActivity {
 
     public void obtenir_solde(View view) {
         reference = FirebaseDatabase.getInstance().getReference("comptes");
-        TextView soldeText = findViewById(R.id.solde);
+        TextView soldeText = findViewById(R.id.soldePrev);
 
         reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
